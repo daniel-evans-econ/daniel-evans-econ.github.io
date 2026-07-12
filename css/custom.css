@@ -83,3 +83,17 @@ a {
     width: 62%;
   }
 }
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
