@@ -73,6 +73,17 @@ a {
   text-decoration: inherit;
 }
 
+#mainNav .navbar-nav a.nav-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  transition: color 0.15s ease-in-out;
+}
+
+#mainNav .navbar-nav a.nav-link:hover,
+#mainNav .navbar-nav a.nav-link:focus {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
 @media (min-width: 992px) {
   .header-img-col {
     flex: 0 0 auto;
