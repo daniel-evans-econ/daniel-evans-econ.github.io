@@ -86,14 +86,14 @@ a {
 
 @media (min-width: 768px) {
   .container {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
