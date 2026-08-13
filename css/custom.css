@@ -65,16 +65,11 @@ a {
     font-size: 0.875rem;
     line-height: 1.35;
     color: #55595c;
-    /* Hanging indent keeps a wrapped second line aligned under the prize name */
-    padding-left: 1.45em;
-    text-indent: -1.45em;
 }
 
 .p_award .fa-trophy{
     color: #c8a02c;
-    width: 1.1em;
-    text-align: center;
-    margin-right: 0.35em;
+    margin-right: 0.5em;
 }
 
 .info {
