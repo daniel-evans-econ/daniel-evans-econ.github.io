@@ -121,3 +121,38 @@ a {
     padding-right: 5rem;
   }
 }
+/* Research-topic labels share a compact shape and wrap naturally on mobile. */
+.paper-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.35rem 0 0.45rem;
+}
+
+.topic-tag {
+  display: inline-block;
+  padding: 0.22em 0.65em;
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.topic-tag--behavioral {
+  color: #24569a;
+  background-color: #edf4ff;
+  border-color: #cbdcf5;
+}
+
+.topic-tag--social {
+  color: #14665f;
+  background-color: #eaf6f3;
+  border-color: #c4e2dc;
+}
+
+.topic-tag--methods {
+  color: #704b91;
+  background-color: #f4eef9;
+  border-color: #dfd0ec;
+}
