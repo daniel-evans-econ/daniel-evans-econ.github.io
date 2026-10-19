@@ -123,14 +123,14 @@ a {
 }
 /* Research-topic labels share a compact shape and wrap naturally on mobile. */
 .paper-topics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin: 0.35rem 0 0.45rem;
+  display: inline;
+  margin-left: 0.45rem;
 }
 
 .topic-tag {
   display: inline-block;
+  vertical-align: middle;
+  margin: 0.12rem 0.15rem 0.12rem 0;
   padding: 0.22em 0.65em;
   border: 1px solid;
   border-radius: 999px;
