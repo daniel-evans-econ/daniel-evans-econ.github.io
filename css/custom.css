@@ -126,7 +126,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.35rem 1rem;
+  gap: 0.35rem 0.65rem;
 }
 
 .paper-links {
@@ -137,14 +137,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
-  margin-left: auto;
-}
-
-@media (max-width: 575.98px) {
-  .paper-actions .paper-topics {
-    flex-basis: 100%;
-    margin-left: 0;
-  }
+  margin-left: 0;
 }
 
 .topic-tag {
