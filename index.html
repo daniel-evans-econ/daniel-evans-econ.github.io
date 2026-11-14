@@ -22,7 +22,7 @@
       <link rel="icon" href="images/Bonn_Favicon.jpg" type="image/jpeg">
       <!-- CSS elements -->
       <link href="css/styles_navbar.css" rel="stylesheet" />
-      <link rel="stylesheet" type="text/css" href="css/custom.css?v=11">
+      <link rel="stylesheet" type="text/css" href="css/custom.css?v=20261114-tags">
    </head>
    <body id="page-top">
       <div id="content">
@@ -100,6 +100,18 @@
    </header>
 
 
+      <div class="research-filters" id="research-filters" hidden>
+         <span class="filter-label">Filter research:</span>
+         <div class="filter-options" role="group" aria-label="Filter papers and work in progress by topic">
+            <button type="button" class="topic-tag topic-tag--all" data-clear-topics aria-pressed="true">All</button>
+            <button type="button" class="topic-tag topic-tag--behavioral" data-topic="behavioral" aria-pressed="false">Behavioral &amp; experimental</button>
+            <button type="button" class="topic-tag topic-tag--social" data-topic="social" aria-pressed="false">Group &amp; social</button>
+            <button type="button" class="topic-tag topic-tag--methods" data-topic="methods" aria-pressed="false">Metascience &amp; methods</button>
+         </div>
+         <p class="filter-status" id="filter-status" role="status" aria-live="polite"></p>
+      </div>
+      <p class="filter-empty" id="filter-empty" hidden>No papers match all selected topics. Select All to reset.</p>
+
       <section id="JobMarketPaper">
 
             <hr class="my-3">
@@ -108,6 +120,7 @@
                <div class="col-md">
                   <h4 class=" section">  Job market paper </h4>
 
+<article class="research-entry" data-topics="behavioral social">
 <p class="p_title_p"><b>Do Groups Make Wise Decisions?</b> | with Georg Schneider
 </p>
 <p class="paper-actions p_title_p">
@@ -125,8 +138,8 @@
    </a>
    </span>
 <span class="paper-topics" aria-label="Research topics">
-   <span class="topic-tag topic-tag--behavioral">Behavioral &amp; experimental</span>
-   <span class="topic-tag topic-tag--social">Group &amp; social</span>
+   <button type="button" class="topic-tag topic-tag--behavioral" data-topic="behavioral" aria-pressed="false">Behavioral &amp; experimental</button>
+   <button type="button" class="topic-tag topic-tag--social" data-topic="social" aria-pressed="false">Group &amp; social</button>
 </span>
 </p>
 <p class="p_award">
@@ -137,6 +150,8 @@
       Many important decisions are made jointly by groups. While groups can draw on and discuss diverse perspectives, they are also susceptible to collective failures, such as herding. We investigate this tension by studying three features that distinguish joint from individual decision-making: composition, communication, and collaborative aggregation. Direct comparisons between joint and individual decisions cannot isolate these features. We separate them in an interactive online experiment in which retail investors construct portfolios to maximize returns and limit volatility in a randomly assigned decision mode. Adjacent modes differ from one another by a single feature. We find that the benefits of joint decision-making can be explained by composition alone, because pooling independent submissions reduces portfolio concentration and volatility. Communication undermines these benefits by reducing the diversity of members’ inputs and encouraging riskier strategies that fail to increase returns on average. Requiring members to agree on one portfolio (collaborative aggregation) has little overall effect relative to pooling, but improves diversification when their beliefs differ. This decomposition reveals a cost of communication that prevents groups from making full use of diverse inputs.
    </p>
 </div>
+</article>
+            </div>
             </div>
         </section>
 
@@ -148,6 +163,7 @@
                <div class="col-md">
                   <h4 class=" section">  Papers </h4>
 
+<article class="research-entry" data-topics="behavioral methods">
 <p class="p_title_p"><b>Evaluating and Improving Experimental Designs in Economics</b> | with 
    <a href="https://luca-henkel.github.io/" class="n_link" role="button" target="_blank">Luca Henkel</a>, 
    <a href="https://brianjabarian.org/" class="n_link" role="button" target="_blank">Brian Jabarian</a>, and 
@@ -168,8 +184,8 @@
    </a>
    </span>
 <span class="paper-topics" aria-label="Research topics">
-   <span class="topic-tag topic-tag--behavioral">Behavioral &amp; experimental</span>
-   <span class="topic-tag topic-tag--methods">Metascience &amp; methods</span>
+   <button type="button" class="topic-tag topic-tag--behavioral" data-topic="behavioral" aria-pressed="false">Behavioral &amp; experimental</button>
+   <button type="button" class="topic-tag topic-tag--methods" data-topic="methods" aria-pressed="false">Metascience &amp; methods</button>
 </span>
 </p>
 <div class="px-4 collapse card info" id="summary-evaluating-experiments">
@@ -177,7 +193,9 @@
       Conducting experiments requires researchers to make numerous design choices while respecting statistical, practical, and ethical constraints. We develop the Experimental Design Assessment Tool (EDAT) to help researchers navigate this complexity when generating and evaluating evidence from experiments. EDAT is based on a comprehensive framework that distills experimental designs into 30 components and provides guidance on optimal design choices for each. We operationalize this framework with an evaluation instrument that guides evaluators through experimental designs using targeted questions and generates quantitative quality scores. We evaluate EDAT&rsquo;s performance by applying it to experiments published in eight top economics journals in 2000, 2001, and 2020. Evaluators&rsquo; scores show high reliability and strongly predict citation counts, publication outcomes, and other proxies for impact and quality. This suggests that a quantitative assessment of experimental design quality is feasible. They further reveal that there cannot be a &ldquo;perfect experiment&rdquo; in practice due to the existence of trade-offs, such as between certain components of internal and external validity. We show how researchers navigate these trade-offs and identify the design features most valued by the profession. Finally, we document systematic improvements in quality over time and heterogeneity in design features between subfields and experiment types.
    </p>
 </div>
-                <p class="p_title_p">  <b>Open Science, Closed Peer Review? </b> | with Gary Charness, <a href="https://sites.google.com/site/annadreber/" class="n_link" role="button" target="_blank">Anna Dreber</a>, <a href="https://sites.google.com/view/adam-gill/" class="n_link" role="button" target="_blank">Adam Gill</a>, and <a href="https://severinetoussaert.com/" class="n_link" role="button" target="_blank">Séverine Toussaert</a>
+</article>
+                <article class="research-entry" data-topics="methods">
+<p class="p_title_p">  <b>Open Science, Closed Peer Review? </b> | with Gary Charness, <a href="https://sites.google.com/site/annadreber/" class="n_link" role="button" target="_blank">Anna Dreber</a>, <a href="https://sites.google.com/view/adam-gill/" class="n_link" role="button" target="_blank">Adam Gill</a>, and <a href="https://severinetoussaert.com/" class="n_link" role="button" target="_blank">Séverine Toussaert</a>
 </p>
                <p class="p_title_p">
                    <i><u>Journal of the Economic Science Association</u></i>, May 2026
@@ -191,13 +209,15 @@
    </a>
    </span>
 <span class="paper-topics" aria-label="Research topics">
-   <span class="topic-tag topic-tag--methods">Metascience &amp; methods</span>
+   <button type="button" class="topic-tag topic-tag--methods" data-topic="methods" aria-pressed="false">Metascience &amp; methods</button>
 </span>
 </p>                  <div class="px-4 collapse card info" id="abstract-open-peer-review">
                      <p class="text-justify" >
                         Open science initiatives have gained traction in recent years. However, open <i> peer-review </i> practices, i.e., reforms that (i) modify the identifiability of stakeholders and (ii) establish channels for the open communication of information between stakeholders, have seen very little adoption in economics. In this paper, we explore the feasibility and desirability of such reforms. We present insights derived from survey data documenting the attitudes of 802 experimental/behavioral economists, a conceptual framework, a literature review, and cross-disciplinary data on current journal practices. On (i), most respondents support preserving anonymity for referees, but views about anonymity for authors and associate editors are mixed. On (ii), most respondents are open to publishing anonymized referee reports, sharing reports between referees, and allowing authors to appeal editorial decisions. Active reviewers, editors, and respondents from the US/Canada are generally less open to transparency reforms.
                      </p>
                   </div>
+</article>
+<article class="research-entry" data-topics="methods">
 <p class="p_title_p">
    <b>Improving Peer Review in Economics: Stocktaking and Proposals </b> | with 
    Gary Charness, 
@@ -217,7 +237,7 @@
    | <a data-toggle="collapse" href="#coverage-peer-review-improvement" role="button" aria-expanded="false" aria-controls="coverage-peer-review-improvement">Coverage <span class="fa fa-newspaper-o" aria-hidden="true"></span></a>
    </span>
 <span class="paper-topics" aria-label="Research topics">
-   <span class="topic-tag topic-tag--methods">Metascience &amp; methods</span>
+   <button type="button" class="topic-tag topic-tag--methods" data-topic="methods" aria-pressed="false">Metascience &amp; methods</button>
 </span>
 </p>
 <div class="px-4 collapse card info" id="coverage-peer-review-improvement">
@@ -232,6 +252,8 @@
       Peer review is central to the lives of researchers. We conduct a survey on improving peer review to which we received responses from over 1,400 economists. The survey is the bedrock of this article, which was written to (i) document the current state of peer review and (ii) investigate concrete steps towards improving it. We offer a snapshot of the recent submission and peer review activity of respondents, detail the difficulties they report facing, and measure their attitudes about various challenges and possible proposals to address them. We hope that this report will provide fertile ground for the development and implementation of practical solutions for improving peer review in economics.
    </p>
 </div>
+</article>
+<article class="research-entry" data-topics="methods">
 <p class="p_title_p"><b>Reassessing the Benefit-to-Cost Ratio of Payments for Ecosystem Services</b> | with Paul J. Ferraro, Subhrendu K. Pattanayak, and Maximiliane Sievert
 </p>
 <p class="paper-actions p_abstract_p">
@@ -243,7 +265,7 @@
    </a>
    </span>
 <span class="paper-topics" aria-label="Research topics">
-   <span class="topic-tag topic-tag--methods">Metascience &amp; methods</span>
+   <button type="button" class="topic-tag topic-tag--methods" data-topic="methods" aria-pressed="false">Metascience &amp; methods</button>
 </span>
 </p>
 <div class="px-4 collapse card info" id="summary-reassessing-pes">
@@ -251,6 +273,7 @@
       Jayachandran et al. (2017) present results from a randomized payments-for-ecosystem-services program (PES) in Uganda, in which private forest owners in treatment villages were paid to preserve tree cover on their properties. The original authors find that treatment villages see a smaller decline in tree cover between baseline and endline (<i>&beta;&#770;</i> = 5.478, SE = 2.652, <i>p</i> = 0.04). We conduct a multiverse robustness reproduction of the original authors&rsquo; main specification and find that its statistical significance is sensitive to reasonable and conservative variations in analytic choices: 72% (43%) of analysis paths are insignificant at the 5% (10%) level. In contrast, point estimates and signs are more stable: every estimate expressed in the same unit as the main specification falls within the original 95% confidence interval, and 99% of coefficients are positive across all specifications. An ex-post power analysis suggests that the statistical power of the study design is low and insufficient for detecting modestly smaller effect sizes than the published estimate. Taken together, these findings are consistent with a positive effect that is smaller than originally reported. Recalculating the benefit-to-cost ratio assuming a true effect half as large as the observed effect reduces it from 2.4 to approximately 1.2. The program ceases to pass a benefit-cost test if the true effect is less than approximately 42% of the published estimate. For policymakers, our findings imply that funding and scale-up decisions should account for uncertainty in the treatment effect when comparing PES with alternative interventions.
    </p>
 </div>
+</article>
             </div> 
         </section>
 <section id="WorksInProgress"> 
@@ -259,6 +282,7 @@
       <div class="col-md">
          <h4 class="section">Work in progress</h4>
 
+<article class="research-entry" data-topics="behavioral methods">
 <p class="p_title_p"><b>How Well Do We Predict Research Results?</b> | with 
    <a href="https://www.taisukeimai.com/" class="n_link" role="button" target="_blank">Taisuke Imai</a> and 
    <a href="https://severinetoussaert.com/" class="n_link" role="button" target="_blank">Séverine Toussaert</a>
@@ -273,8 +297,8 @@
 | Drafting stage
    </span>
 <span class="paper-topics" aria-label="Research topics">
-   <span class="topic-tag topic-tag--behavioral">Behavioral &amp; experimental</span>
-   <span class="topic-tag topic-tag--methods">Metascience &amp; methods</span>
+   <button type="button" class="topic-tag topic-tag--behavioral" data-topic="behavioral" aria-pressed="false">Behavioral &amp; experimental</button>
+   <button type="button" class="topic-tag topic-tag--methods" data-topic="methods" aria-pressed="false">Metascience &amp; methods</button>
 </span>
 </p>
 <div class="px-4 collapse card info" id="summary-predict-accuracy">
@@ -282,6 +306,8 @@
  We leverage a meta-analysis to assess the accuracy of forecasts of research results relative to actual study outcomes.
    </p>
    </div>
+</article>
+<article class="research-entry" data-topics="behavioral methods">
 <p class="p_title_p"><b>Why Do Researchers Collect Forecasts? (Why) Should They?</b> | with 
    <a href="https://www.taisukeimai.com/" class="n_link" role="button" target="_blank">Taisuke Imai</a> and 
    <a href="https://severinetoussaert.com/" class="n_link" role="button" target="_blank">Séverine Toussaert</a>
@@ -296,8 +322,8 @@
 | Development stage
    </span>
 <span class="paper-topics" aria-label="Research topics">
-   <span class="topic-tag topic-tag--behavioral">Behavioral &amp; experimental</span>
-   <span class="topic-tag topic-tag--methods">Metascience &amp; methods</span>
+   <button type="button" class="topic-tag topic-tag--behavioral" data-topic="behavioral" aria-pressed="false">Behavioral &amp; experimental</button>
+   <button type="button" class="topic-tag topic-tag--methods" data-topic="methods" aria-pressed="false">Metascience &amp; methods</button>
 </span>
 </p>
 <div class="px-4 collapse card info" id="summary-forecast-returns">
@@ -305,6 +331,8 @@
  We conceptualize and measure the returns to collecting forecasts of research results, and investigate the practice of eliciting them.
    </p>
    </div>
+</article>
+<article class="research-entry" data-topics="behavioral social">
 <p class="p_title_p"><b>What Is It About Social Media?</b> | with Tomáš Jagelka
 </p>
 <p class="paper-actions p_abstract_p">
@@ -317,14 +345,17 @@
 | Development stage
    </span>
 <span class="paper-topics" aria-label="Research topics">
-   <span class="topic-tag topic-tag--behavioral">Behavioral &amp; experimental</span>
-   <span class="topic-tag topic-tag--social">Group &amp; social</span>
+   <button type="button" class="topic-tag topic-tag--behavioral" data-topic="behavioral" aria-pressed="false">Behavioral &amp; experimental</button>
+   <button type="button" class="topic-tag topic-tag--social" data-topic="social" aria-pressed="false">Group &amp; social</button>
 </span>
 </p>
 <div class="px-4 collapse card info" id="summary-social-media">
    <p class="text-justify">
  In a controlled experiment with social media-like features, we study (i) whether people selectively report or misreport their successes to others and (ii) whether exposure to such biased reports harms other people&rsquo;s well-being.
    </p>
+   </div>
+</article>
+      </div>
    </div>
 </section>
 <section id="CrowdScience">
@@ -363,6 +394,6 @@
        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core navbar theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="js/scripts.js?v=20261114-tags"></script>
    </body>
 </html>

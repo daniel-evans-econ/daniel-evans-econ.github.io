@@ -140,32 +140,44 @@ a {
   margin-left: 0;
 }
 
+/* Palette and tint levels match Taisuke Imai's keyword tags. */
 .topic-tag {
-  display: inline-block;
+  --topic-color: #005caf;
+  display: inline-flex;
+  align-items: center;
   vertical-align: middle;
   margin: 0.12rem 0;
-  padding: 0.22em 0.65em;
-  border: 1px solid;
+  padding: 1px 10px;
+  border: 1px solid color-mix(in srgb, var(--topic-color) 30%, transparent);
   border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.4;
+  color: var(--topic-color);
+  background: color-mix(in srgb, var(--topic-color) 8%, transparent);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+  transition: filter 0.2s;
 }
-
-.topic-tag--behavioral {
-  color: #24569a;
-  background-color: #edf4ff;
-  border-color: #cbdcf5;
+.topic-tag--behavioral { --topic-color: #005caf; }
+.topic-tag--social, .topic-tag--methods { --topic-color: #e16b8c; }
+.topic-tag--all { --topic-color: #55595c; }
+.topic-tag:hover { filter: brightness(0.9); }
+.topic-tag:focus-visible { outline: 2px solid var(--topic-color); outline-offset: 3px; }
+.topic-tag[aria-pressed="true"] {
+  border-color: var(--topic-color);
+  background: color-mix(in srgb, var(--topic-color) 16%, transparent);
 }
-
-.topic-tag--social {
-  color: #14665f;
-  background-color: #eaf6f3;
-  border-color: #c4e2dc;
+.research-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.65rem;
+  margin: 1.2rem 0 0.5rem;
+  scroll-margin-top: 4rem;
 }
-
-.topic-tag--methods {
-  color: #704b91;
-  background-color: #f4eef9;
-  border-color: #dfd0ec;
-}
+.filter-label { font-size: 0.875rem; color: #55595c; }
+.filter-options { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.filter-status { flex-basis: 100%; margin: 0.2rem 0 0; font-size: 0.8rem; color: #55595c; }
+.filter-empty { margin: 1rem 0; }
+[hidden] { display: none !important; }
