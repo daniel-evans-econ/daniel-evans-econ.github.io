@@ -42,7 +42,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const buttons = Array.from(document.querySelectorAll('button[data-topic]'));
     const selected = new Set();
     const status = document.getElementById('filter-status');
-    const clear = filters.querySelector('[data-clear-topics]');
+    const activeTopics = document.getElementById('active-topics');
+    const labels = new Map(buttons.map(button => [button.dataset.topic, button.textContent]));
+    const restoreFocus = () => {
+        const target = activeTopics.querySelector('button') || document.querySelector('.research-entry:not([hidden]) button[data-topic]');
+        if (target) target.focus({preventScroll: true});
+    };
     const update = () => {
         let visible = 0;
         entries.forEach(entry => {
@@ -54,25 +59,32 @@ window.addEventListener('DOMContentLoaded', () => {
             section.hidden = !section.querySelector('.research-entry:not([hidden])');
         });
         buttons.forEach(button => button.setAttribute('aria-pressed', String(selected.has(button.dataset.topic))));
-        clear.setAttribute('aria-pressed', String(selected.size === 0));
-        const labels = Array.from(selected).map(topic => filters.querySelector('[data-topic="' + topic + '"]').textContent);
-        status.textContent = selected.size ? visible + ' of ' + entries.length + ' papers and projects · ' + labels.join(' + ') : '';
+        filters.hidden = selected.size === 0;
+        activeTopics.replaceChildren();
+        selected.forEach(topic => {
+            const chip = document.createElement('button');
+            chip.type = 'button';
+            chip.className = 'topic-tag topic-tag--' + topic;
+            chip.textContent = labels.get(topic) + ' ×';
+            chip.setAttribute('aria-label', 'Remove ' + labels.get(topic) + ' filter');
+            chip.addEventListener('click', () => { selected.delete(topic); update(); restoreFocus(); });
+            activeTopics.appendChild(chip);
+        });
+        status.textContent = selected.size ? visible + ' of ' + entries.length + ' papers and projects match ' + Array.from(selected, topic => labels.get(topic)).join(' and ') : 'All papers and projects shown.';
         document.getElementById('filter-empty').hidden = visible !== 0;
     };
     buttons.forEach(button => button.addEventListener('click', () => {
         const topic = button.dataset.topic;
         selected.has(topic) ? selected.delete(topic) : selected.add(topic);
         update();
-        if (!filters.contains(button)) {
+        if (selected.size) {
             filters.scrollIntoView({block: 'start'});
-            filters.querySelector('[data-topic="' + topic + '"]').focus({preventScroll: true});
+            restoreFocus();
         }
     }));
-    clear.addEventListener('click', () => { selected.clear(); update(); });
     // Section navigation always reveals the requested section.
     document.querySelectorAll('#mainNav a[href="#Papers"], #mainNav a[href="#WorksInProgress"]').forEach(link => {
         link.addEventListener('click', () => { selected.clear(); update(); });
     });
-    filters.hidden = false;
     update();
 });

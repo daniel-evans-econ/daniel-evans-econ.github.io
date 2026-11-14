@@ -22,7 +22,7 @@
       <link rel="icon" href="images/Bonn_Favicon.jpg" type="image/jpeg">
       <!-- CSS elements -->
       <link href="css/styles_navbar.css" rel="stylesheet" />
-      <link rel="stylesheet" type="text/css" href="css/custom.css?v=20261114-tags">
+      <link rel="stylesheet" type="text/css" href="css/custom.css?v=20261114-tags2">
    </head>
    <body id="page-top">
       <div id="content">
@@ -101,16 +101,11 @@
 
 
       <div class="research-filters" id="research-filters" hidden>
-         <span class="filter-label">Filter research:</span>
-         <div class="filter-options" role="group" aria-label="Filter papers and work in progress by topic">
-            <button type="button" class="topic-tag topic-tag--all" data-clear-topics aria-pressed="true">All</button>
-            <button type="button" class="topic-tag topic-tag--behavioral" data-topic="behavioral" aria-pressed="false">Behavioral &amp; experimental</button>
-            <button type="button" class="topic-tag topic-tag--social" data-topic="social" aria-pressed="false">Group &amp; social</button>
-            <button type="button" class="topic-tag topic-tag--methods" data-topic="methods" aria-pressed="false">Metascience &amp; methods</button>
-         </div>
-         <p class="filter-status" id="filter-status" role="status" aria-live="polite"></p>
+         <span class="filter-label">Topics:</span>
+         <div class="filter-options" id="active-topics" role="group" aria-label="Active topic filters"></div>
       </div>
-      <p class="filter-empty" id="filter-empty" hidden>No papers match all selected topics. Select All to reset.</p>
+      <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+      <p class="filter-empty" id="filter-empty" hidden>No papers match all selected topics. Remove a topic to see more papers.</p>
 
       <section id="JobMarketPaper">
 
@@ -394,6 +389,6 @@
        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core navbar theme JS-->
-        <script src="js/scripts.js?v=20261114-tags"></script>
+        <script src="js/scripts.js?v=20261114-tags2"></script>
    </body>
 </html>

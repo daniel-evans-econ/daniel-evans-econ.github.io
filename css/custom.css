@@ -161,7 +161,6 @@ a {
 }
 .topic-tag--behavioral { --topic-color: #005caf; }
 .topic-tag--social, .topic-tag--methods { --topic-color: #e16b8c; }
-.topic-tag--all { --topic-color: #55595c; }
 .topic-tag:hover { filter: brightness(0.9); }
 .topic-tag:focus-visible { outline: 2px solid var(--topic-color); outline-offset: 3px; }
 .topic-tag[aria-pressed="true"] {
@@ -178,6 +177,5 @@ a {
 }
 .filter-label { font-size: 0.875rem; color: #55595c; }
 .filter-options { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.filter-status { flex-basis: 100%; margin: 0.2rem 0 0; font-size: 0.8rem; color: #55595c; }
 .filter-empty { margin: 1rem 0; }
 [hidden] { display: none !important; }
